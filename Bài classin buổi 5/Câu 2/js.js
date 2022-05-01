@@ -38,4 +38,9 @@ function Run() {
     setInterval(Lyric,13500)
 }
 
+
+const audio = document.querySelector("audio");
+audio.play()
+audio.onended = ()=>{audio.play()} 
+
 Run()
