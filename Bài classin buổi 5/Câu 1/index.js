@@ -82,7 +82,7 @@ changeBtn.addEventListener("click",()=>{
     let myUserList = getUserList()
     if ( inputFromUser == "" || inputToUser == "") {
         changeState.textContent = "Please insert user"
-    } else if (!myUserList.includes(fromUser)) {
+    } else if (!myUserList.includes(inputFromUser)) {
         changeState.textContent = "User does not exist"
     } else {
         let anotherUserArray = getUserList()
