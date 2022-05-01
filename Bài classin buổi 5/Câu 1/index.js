@@ -19,6 +19,7 @@ inputBtn.addEventListener("click",()=>{
     if (inputKey == "" || inputValue == "") {
         addState.textContent = "Please insert user"
     } else {
+        addState.textContent = "User have been added"
         localStorage.setItem(inputKey, inputValue)
         renderUserList()
     }
