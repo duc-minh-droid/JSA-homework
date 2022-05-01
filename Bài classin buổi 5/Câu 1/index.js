@@ -19,7 +19,7 @@ inputBtn.addEventListener("click",()=>{
     if (inputKey == "" || inputValue == "") {
         addState.textContent = "Please insert user"
     } else {
-        addState.textContent = "User have been added"
+        addState.textContent = "User has been added"
         localStorage.setItem(inputKey, inputValue)
         renderUserList()
     }
@@ -98,7 +98,7 @@ changeBtn.addEventListener("click",()=>{
         })
         userList.textContent = ""
         renderUserList()
-        changeState.textContent = "User have been changed"
+        changeState.textContent = "User has been changed"
     }
     fromUser.value = ""
     toUser.value = ""
@@ -127,7 +127,7 @@ deleteBtn.addEventListener("click",()=>{
                 localStorage.removeItem(key)
             }
         }
-        deleteState.textContent = "User have been deleted"
+        deleteState.textContent = "User has been deleted"
         userList.textContent = ""
         renderUserList()
     }
@@ -136,7 +136,7 @@ deleteBtn.addEventListener("click",()=>{
 // Clear user
 const clearBtn = document.querySelector(".clearBtn")
 clearBtn.addEventListener("click", ()=>{
-    deleteState.textContent = "Every user have been cleared"
+    deleteState.textContent = "Every user has been cleared"
     localStorage.clear()
     userList.textContent = ""
     renderUserList()
