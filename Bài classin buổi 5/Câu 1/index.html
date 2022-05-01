@@ -8,11 +8,55 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div class="display"></div>
-    <button class="fetch">Fetch</button>
-    <button class="change">Change</button>
-    <button class="remove">Remove</button>
-    <button class="clear">Clear</button>
+    <div class="screen">
+
+        <div class="contentWrapper">
+            <!-- add user -->
+            <div class="title">Add an User into Local Storage</div>
+            <div class="addWrapper">
+                <div class="addText">
+                    <input type="text" class="inputName flexText">
+                    <input type="text" class="inputText flexText">
+
+                </div>
+                <button class="inputBtn flexButton">Add</button>
+
+            </div>
+            <div class="addState stateBar"></div>
+            
+        
+            <!-- fetch user -->
+            <div class="title">User List Display</div>
+            <div class="currentUser"></div>
+        
+            <!-- change user -->
+            <div class="title">Change an User</div>
+            <div class="addWrapper">
+                <div class="addText">
+                    <input type="text" class="fromUser flexText">
+                    <input type="text" class="toUser flexText">
+
+                </div>
+                <button class="changeBtn flexButton">Change</button>
+
+            </div>
+            <div class="changeState stateBar"></div>
+        
+            <!-- delete user -->
+            <div class="title">Delete an User</div>
+            <div class="deleteDiv">
+                <input type="text" class="deleteUser">
+                <button class="deleteBtn redButton">Delete</button>
+                <button class="clearBtn redButton">Clear</button>
+                
+            </div>
+            <div class="deleteState stateBar"></div>
+
+        </div>
+
+    </div>
+
+
     <script src="./index.js"></script>
 </body>
 </html>
