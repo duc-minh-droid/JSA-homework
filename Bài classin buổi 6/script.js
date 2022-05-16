@@ -1,15 +1,15 @@
 console.log(document.forms.ShoppingList)
 doShowAll()
 
-function checkBrowser() {
+const checkBrowser = () => {
     if ('localStorage' in window && window['localStorage'] !== null) {
         return true
     } else {
-         return false
+        return false
     }
 }
 
-function doShowAll() {
+const doShowAll = () => {
     if (checkBrowser()) {
         let key = ''
         let list = '<tr><th>Item</th><th>Value</th></tr>\n'
@@ -34,7 +34,7 @@ function doShowAll() {
 }
 
 
-function SaveItem() {
+const SaveItem = () => {
     let name = document.forms.ShoppingList.name.value;
     let data = document.forms.ShoppingList.data.value;
     localStorage.setItem(name, data);
@@ -42,7 +42,7 @@ function SaveItem() {
 }
 
 
-function ModifyItem() {
+const ModifyItem = () => {
     let name1=document.forms.ShoppingList.name.value;
     let data1=document.forms.ShoppingList.data.value;
     
@@ -53,13 +53,13 @@ function ModifyItem() {
     doShowAll( );
 }
 
-function RemoveItem() {
+const RemoveItem = () => {
     let name=document.forms.ShoppingList.name.value;
     document.forms.ShoppingList.data.value=localStorage.removeItem(name);
     doShowAll();
 }
 
-function ClearAll() {
+const ClearAll = () => {
     localStorage.clear()
     doShowAll()
 }
